@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Campus Print — Place Order</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Campus Print</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="print.html">Place Order</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Print Options & Submit Order</h2>
+
+      <form id="order-form">
+        <label for="order-name">Name</label>
+        <input id="order-name" name="orderName" required>
+
+        <label for="order-roll">Roll / ID</label>
+        <input id="order-roll" name="orderRoll">
+
+        <label for="bw-pages">Black & White pages</label>
+        <input id="bw-pages" name="bwPages" type="number" min="0" value="0">
+
+        <label for="color-pages">Colour pages</label>
+        <input id="color-pages" name="colorPages" type="number" min="0" value="0">
+
+        <p>Prices: B/W = Rs.3/page, Colour = Rs.5/page</p>
+
+        <p>Total: Rs. <span id="total-amount">0</span></p>
+
+        <label>
+          <input type="checkbox" id="agree" required>
+          I confirm the files have been uploaded and I agree to pay for this order.
+        </label>
+
+        <button type="submit">Submit Order</button>
+      </form>
+
+      <div id="order-result" class="muted"></div>
+
+      <hr>
+      <h3>Order Status</h3>
+      <p id="order-status">No orders yet.</p>
+      <p class="muted">(Status updates require backend integration to update these states.)</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">© Campus Print</footer>
+  <script src="scripts.js"></script>
+</body>
+</html>

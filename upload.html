@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Campus Print — Upload Files</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Campus Print</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="print.html">Place Order</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Upload your files</h2>
+      <p>You can upload any file types (pdf, docx, pptx, jpg, png, txt, zip...).</p>
+
+      <form id="upload-form">
+        <label for="student-name">Your name</label>
+        <input id="student-name" name="studentName" required>
+
+        <label for="student-roll">Roll / ID (optional)</label>
+        <input id="student-roll" name="studentRoll">
+
+        <label for="file-input">Choose files</label>
+        <input id="file-input" type="file" name="files" multiple accept="*/*" required>
+
+        <button type="submit">Upload Files</button>
+      </form>
+
+      <div id="upload-result" class="muted"></div>
+
+      <hr>
+      <p>After successful upload you'll be redirected to the <a href="print.html">Place Order</a> page where you can select print options and submit the order.</p>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">© Campus Print</footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
